@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - TULYE Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TULYE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html" class="active">Careers</a></li>
+                <li><a href="login.html">Staff Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="resume-section">
+        <h2>Join Our Team</h2>
+        <p class="resume-intro">We're always looking for talented individuals to join the TULYE family. Please fill out the application form below.</p>
+        
+        <div class="resume-container">
+            <form id="resumeForm">
+                <div class="resume-part">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                </div>
+                
+                <div class="resume-part">
+                    <h3>Key Summary</h3>
+                    <div class="form-group">
+                        <label for="position">Position Applying For:</label>
+                        <select id="position" name="position" required>
+                            <option value="">Select a position</option>
+                            <option value="chef">Chef</option>
+                            <option value="waiter">Waiter/Waitress</option>
+                            <option value="bartender">Bartender</option>
+                            <option value="manager">Manager</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Professional Summary:</label>
+                        <textarea id="summary" name="summary" rows="4" required placeholder="Briefly describe your experience, competence, and skills relevant to the position"></textarea>
+                    </div>
+                </div>
+                
+                <div class="resume-part">
+                    <h3>Education</h3>
+                    <div id="educationEntries">
+                        <div class="education-entry">
+                            <div class="form-group">
+                                <label for="institution1">Institution:</label>
+                                <input type="text" id="institution1" name="institution1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="degree1">Degree/Certificate:</label>
+                                <input type="text" id="degree1" name="degree1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="eduYear1">Year:</label>
+                                <input type="text" id="eduYear1" name="eduYear1" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="addEducation" class="add-btn">Add More Education</button>
+                </div>
+                
+                <div class="resume-part">
+                    <h3>Work Experience</h3>
+                    <div id="experienceEntries">
+                        <div class="experience-entry">
+                            <div class="form-group">
+                                <label for="company1">Company:</label>
+                                <input type="text" id="company1" name="company1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="role1">Role:</label>
+                                <input type="text" id="role1" name="role1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="expYear1">Year:</label>
+                                <input type="text" id="expYear1" name="expYear1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="responsibilities1">Responsibilities:</label>
+                                <textarea id="responsibilities1" name="responsibilities1" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="addExperience" class="add-btn">Add More Experience</button>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                    <button type="reset" class="reset-btn">Reset Form</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TULYE Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let educationCount = 1;
+        let experienceCount = 1;
+        
+        document.getElementById('addEducation').addEventListener('click', function() {
+            educationCount++;
+            
+            const newEntry = document.createElement('div');
+            newEntry.className = 'education-entry';
+            newEntry.innerHTML = `
+                <hr>
+                <div class="form-group">
+                    <label for="institution${educationCount}">Institution:</label>
+                    <input type="text" id="institution${educationCount}" name="institution${educationCount}" required>
+                </div>
+                <div class="form-group">
+                    <label for="degree${educationCount}">Degree/Certificate:</label>
+                    <input type="text" id="degree${educationCount}" name="degree${educationCount}" required>
+                </div>
+                <div class="form-group">
+                    <label for="eduYear${educationCount}">Year:</label>
+                    <input type="text" id="eduYear${educationCount}" name="eduYear${educationCount}" required>
+                </div>
+            `;
+            
+            document.getElementById('educationEntries').appendChild(newEntry);
+        });
+        
+        document.getElementById('addExperience').addEventListener('click', function() {
+            experienceCount++;
+            
+            const newEntry = document.createElement('div');
+            newEntry.className = 'experience-entry';
+            newEntry.innerHTML = `
+                <hr>
+                <div class="form-group">
+                    <label for="company${experienceCount}">Company:</label>
+                    <input type="text" id="company${experienceCount}" name="company${experienceCount}" required>
+                </div>
+                <div class="form-group">
+                    <label for="role${experienceCount}">Role:</label>
+                    <input type="text" id="role${experienceCount}" name="role${experienceCount}" required>
+                </div>
+                <div class="form-group">
+                    <label for="expYear${experienceCount}">Year:</label>
+                    <input type="text" id="expYear${experienceCount}" name="expYear${experienceCount}" required>
+                </div>
+                <div class="form-group">
+                    <label for="responsibilities${experienceCount}">Responsibilities:</label>
+                    <textarea id="responsibilities${experienceCount}" name="responsibilities${experienceCount}" rows="3" required></textarea>
+                </div>
+            `;
+            
+            document.getElementById('experienceEntries').appendChild(newEntry);
+        });
+        
+        document.getElementById('resumeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will review it and contact you soon.');
+            this.reset();
+            
+            while (document.querySelectorAll('.education-entry').length > 1) {
+                document.getElementById('educationEntries').removeChild(document.getElementById('educationEntries').lastChild);
+            }
+            
+            while (document.querySelectorAll('.experience-entry').length > 1) {
+                document.getElementById('experienceEntries').removeChild(document.getElementById('experienceEntries').lastChild);
+            }
+            
+            educationCount = 1;
+            experienceCount = 1;
+        });
+    </script>
+</body>
+</html>

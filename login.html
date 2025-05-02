@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login - TULYE Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TULYE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Careers</a></li>
+                <li><a href="login.html" class="active">Staff Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Restaurant Manager Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                    <span class="error" id="usernameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TULYE Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let isValid = true;
+            
+            if (username === '') {
+                document.getElementById('usernameError').textContent = 'Username is required';
+                isValid = false;
+            } else {
+                document.getElementById('usernameError').textContent = '';
+            }
+            
+            if (password === '') {
+                document.getElementById('passwordError').textContent = 'Password is required';
+                isValid = false;
+            } else {
+                document.getElementById('passwordError').textContent = '';
+            }
+            
+            if (isValid) {
+                if (username === 'admin' && password === 'password') {
+                    window.location.href = 'stock.html';
+                } else {
+                    window.location.href = 'stock.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

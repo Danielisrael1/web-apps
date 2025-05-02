@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management - TULYE Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>TULYE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Careers</a></li>
+                <li><a href="login.html">Staff Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="stock-section">
+        <h2>Stock Management</h2>
+        <p class="welcome-msg">Welcome, Manager! Here are the items stocked for today's meals.</p>
+        
+        <div class="stock-container">
+            <div class="stock-category">
+                <h3>Meat & Seafood</h3>
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chicken Breast</td>
+                            <td>15</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Beef Sirloin</td>
+                            <td>10</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Salmon Fillet</td>
+                            <td>8</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Shrimp</td>
+                            <td>5</td>
+                            <td>kg</td>
+                            <td class="status-low">Low</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="stock-category">
+                <h3>Vegetables</h3>
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tomatoes</td>
+                            <td>20</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Lettuce</td>
+                            <td>15</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Onions</td>
+                            <td>25</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Bell Peppers</td>
+                            <td>3</td>
+                            <td>kg</td>
+                            <td class="status-low">Low</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="stock-category">
+                <h3>Dairy & Eggs</h3>
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Milk</td>
+                            <td>30</td>
+                            <td>L</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Cheese</td>
+                            <td>10</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Butter</td>
+                            <td>5</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Eggs</td>
+                            <td>10</td>
+                            <td>dozen</td>
+                            <td class="status-low">Low</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="stock-category">
+                <h3>Dry Goods</h3>
+                <table class="stock-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rice</td>
+                            <td>50</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Flour</td>
+                            <td>30</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Sugar</td>
+                            <td>20</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                        <tr>
+                            <td>Salt</td>
+                            <td>15</td>
+                            <td>kg</td>
+                            <td class="status-good">Good</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="stock-actions">
+            <button id="orderBtn" class="stock-btn">Order More Supplies</button>
+            <button id="printBtn" class="stock-btn">Print Inventory</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TULYE Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('orderBtn').addEventListener('click', function() {
+            alert('Order form will be opened. This feature is under development.');
+        });
+        
+        document.getElementById('printBtn').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+</body>
+</html>
