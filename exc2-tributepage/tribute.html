@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOBI-WINE</title>
-    <Style>
-        body{
-            background-color: antiquewhite;
-            margin: 0;
-            
-        }
-        .img{
-            width:700px
-            
-        }
-        .my-list{
-            background-color: black;
-            color: white;
-            list-style: none;
-            padding: 15px;
-            text-align: center;
-            margin-top: 0;
-            
-        }
-        .my-list li{
-            display: inline;
-            margin-right: 40px;
-        }
-        .about{
-            text-align: center;
-            align-items: center;
-        }
-    </Style>
-</head>
-<body>
+    <style>
+      body {
+        background-color: antiquewhite;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .img {
+        width: 70px;
+        float: left;
+        margin-top: 3px;
+      }
+      .my-list {
+        background-color: black;
+        color: white;
+        list-style: none;
+        padding: 15px;
+        text-align: center;
+        margin-top: 0;
+      }
+      .my-list li {
+        display: inline;
+        margin-right: 40px;
+      }
+/* 
+      .big {
+        flex-direction: row;
+        display: flex;
+      } */
+      .text{
+        float: right;
+        max-width: 50%;
+        text-align: center;
+        align-items: right;
+        margin-top: 200px;
+        margin-right: 20px;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
     <ul class="my-list">
-        <li>NUP</li>
-        <li>VOTE</li>
-        <li>MOBILE</li>
-        <li>SUPPORT</li>
-        <li>PRESIDENT</li>
+      <li>NUP</li>
+      <li>VOTE</li>
+      <li>MOBILE</li>
+      <li>SUPPORT</li>
+      <li>PRESIDENT</li>
     </ul>
-    <img src="bobi.png" alt="png" class="img">
 
-    <div class="about">
-    <h1>BOBI-WINE(H.E)</h1>
-    <p>Robert Kyagulanyi Ssentamu (born 12 February 1982), also popularly known by his stage name Bobi Wine, 
-       is a <b>Ugandan activist</b>, politician, singer, lawyer[1] and actor. He is a former Member of Parliament 
-       for <i>Kyadondo County East constituency</i> in Wakiso District, in Uganda's Central Region.[2]</p>
+    <div class="big">
+      <div class="img">
+        <img src="bobi.png" alt="png" />
+      </div>
+
+      <div class="text">
+        <h1>BOBI-WINE(H.E)</h1>
+        <p id="para">
+          Robert Kyagulanyi Ssentamu (born 12 February 1982), also popularly
+          known by his stage name Bobi Wine, is a <b>Ugandan activist</b>,
+          politician, singer, lawyer[1] and actor. He is a former Member of
+          Parliament for <i>Kyadondo County East constituency</i> in Wakiso
+          District, in Uganda's Central Region.[2]
+        </p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
